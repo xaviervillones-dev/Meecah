@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Valentine?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #ffe6eb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      width: 300px;
+    }
+
+    h1 {
+      color: #e6005c;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      position: relative;
+      height: 60px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+      margin-right: 10px;
+    }
+
+    #no {
+      background: #ccc;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💖 Will you be my Valentine? 💖</h1>
+
+    <div class="buttons">
+      <button id="yes" onclick="sayYes()">Yes</button>
+      <button id="no" onmouseover="moveNo()">No</button>
+    </div>
+  </div>
+
+  <script>
+    function sayYes() {
+      alert("Yay!! 💕 I knew you'd say yes!");
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const x = Math.random() * 200;
+      const y = Math.random() * 40;
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+</html>
